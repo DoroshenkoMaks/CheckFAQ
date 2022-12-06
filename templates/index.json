@@ -21,7 +21,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -29,7 +29,11 @@
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
         "image": "{{ shop.brand.cover_image }}",
         "image_overlay_opacity": 40,
@@ -50,18 +54,21 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand</p>",
+            "heading": "<p>Talk about your brand<\/p>",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -121,7 +128,11 @@
           }
         }
       },
-      "block_order": ["collection-0", "product", "collection-1"],
+      "block_order": [
+        "collection-0",
+        "product",
+        "collection-1"
+      ],
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
@@ -138,7 +149,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -153,7 +164,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -162,7 +173,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -171,13 +182,17 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": ["column1", "column2", "column3"],
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -194,6 +209,97 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "be576b96-28f8-4afd-a525-dc084278c53b": {
+      "type": "faq",
+      "blocks": {
+        "ece23774-c819-4268-bbda-7ceb1e28ce7b": {
+          "type": "text",
+          "settings": {
+            "question_title": "Question",
+            "answer_title": "<p>Answer<\/p>",
+            "is_open": false
+          }
+        },
+        "f4892ec7-ae0e-497d-96c6-8f1b2bc11e25": {
+          "type": "text",
+          "settings": {
+            "question_title": "Question",
+            "answer_title": "<p>Answer<\/p>",
+            "is_open": false
+          }
+        },
+        "76184367-1b6c-45b5-acff-7a73adfbafae": {
+          "type": "text",
+          "settings": {
+            "question_title": "Question",
+            "answer_title": "<p>Answer<\/p>",
+            "is_open": false
+          }
+        },
+        "7cc97bb5-fd99-4974-9de2-033194f3049d": {
+          "type": "text",
+          "settings": {
+            "question_title": "Question",
+            "answer_title": "<p>Answer<\/p>",
+            "is_open": false
+          }
+        }
+      },
+      "block_order": [
+        "ece23774-c819-4268-bbda-7ceb1e28ce7b",
+        "f4892ec7-ae0e-497d-96c6-8f1b2bc11e25",
+        "76184367-1b6c-45b5-acff-7a73adfbafae",
+        "7cc97bb5-fd99-4974-9de2-033194f3049d"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "background": "#edffea",
+        "heading_color": "#000000",
+        "is_full_background": true,
+        "is_every_open": true
+      }
+    },
+    "9882465b-47b9-4e24-b4eb-f4d861334506": {
+      "type": "faq",
+      "blocks": {
+        "2c85dab9-9612-47ea-88f2-26c4135ace43": {
+          "type": "text",
+          "settings": {
+            "question_title": "Question",
+            "answer_title": "<p>Answer<\/p>",
+            "is_open": false
+          }
+        },
+        "c217b042-025d-4212-9278-6717924169c8": {
+          "type": "text",
+          "settings": {
+            "question_title": "Question",
+            "answer_title": "<p>Answer<\/p>",
+            "is_open": false
+          }
+        },
+        "59719acc-a8ec-4db5-991d-a61b0a873060": {
+          "type": "text",
+          "settings": {
+            "question_title": "Question",
+            "answer_title": "<p>Answer<\/p>",
+            "is_open": true
+          }
+        }
+      },
+      "block_order": [
+        "2c85dab9-9612-47ea-88f2-26c4135ace43",
+        "c217b042-025d-4212-9278-6717924169c8",
+        "59719acc-a8ec-4db5-991d-a61b0a873060"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "background": "#ffffff",
+        "heading_color": "#000000",
+        "is_full_background": false,
+        "is_every_open": false
+      }
     }
   },
   "order": [
@@ -202,6 +308,8 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "be576b96-28f8-4afd-a525-dc084278c53b",
+    "9882465b-47b9-4e24-b4eb-f4d861334506"
   ]
 }
