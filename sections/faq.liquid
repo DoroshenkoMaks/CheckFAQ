@@ -1,0 +1,126 @@
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+
+{% javascript %}
+
+  const sectionListeners = function(questionArr, answerArr, isEveryOpen) {
+
+    questionArr.forEach(question => {
+
+      question.addEventListener('click', (e) => {
+
+
+        if (JSON.parse(isEveryOpen)) {
+          question.nextElementSibling.classList.toggle('open');
+        } else {
+          if (question.nextElementSibling.classList.value == 'answer') {
+            answerArr.forEach(answer => {
+              answer.classList.remove('open');
+            });
+            question.nextElementSibling.classList.toggle('open');
+          } else {
+            question.nextElementSibling.classList.remove('open');
+          }
+        }
+      })
+    });
+  }
+
+  let allFaqSections = Array.prototype.slice.call(document.getElementsByClassName('faq'));
+
+  allFaqSections.forEach(elem => {
+
+    let allQuestionsArray = Array.prototype.slice.call(elem.getElementsByClassName('question'));
+    let allAnswersArray = Array.prototype.slice.call(elem.getElementsByClassName('answer'));
+
+    sectionListeners(allQuestionsArray, allAnswersArray, elem.dataset.everyOpen);
+  });
+{% endjavascript %}
+
+
+
+<section class="faq page-width {% if section.settings.is_full_background %}background-full{% endif %}" style="background: {{ section.settings.background }};" data-every-open="{{ section.settings.is_every_open }}">
+  {%- if section.settings.title != blank -%}
+    <h2 class="section__heading h2" style="color: {{ section.settings.heading_color }};">{{ section.settings.title | escape }}</h2>
+  {%- endif -%}
+
+  {%- for block in section.blocks -%}
+    <div class="question--block">
+      <div class="question">{{ block.settings.question_title }}</div>
+      <p class="answer {% if block.settings.is_open %}open{% endif %}">{{ block.settings.answer_title | replace: 'p>', 'span>' }}</p>
+
+    </div>
+  {%- endfor -%}
+
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "FAQ",
+        "label": "Section Title"
+
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Section Background",
+        "default": "#ffffff"
+      },
+      {
+
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading color",
+        "default": "#000000"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_full_background",
+        "label": "Fill full background",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "is_every_open",
+        "label": "Open each answer separately",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "FAQ Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question_title",
+            "default": "Question",
+            "label": "Add a question"
+          }, {
+            "type": "richtext",
+            "id": "answer_title",
+            "default": "<p>Answer</p>",
+            "label": "Add a answer"
+          }, {
+            "type": "checkbox",
+            "id": "is_open",
+            "label": "Open answer by default",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ"
+      }
+    ]
+  }
+{% endschema %}
